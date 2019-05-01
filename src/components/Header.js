@@ -1,16 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import logo from '../images/DDD Logo Color Flat.png'
+import logo from '../images/2D Logo playground.png'
 
 const Header = (props) => (
     <header id="header" style={props.timeout ? {display: 'none'} : {}}>
         <div className="logo">
-            <span><img src={logo} alt="" width="100"/></span>
+            <img className="icon" src={logo} alt=""/>
         </div>
         <div className="content">
             <div className="inner">
                 <h1>Darrel Belvin</h1>
-                <p>A Software and Web Developer<br />Specializing in CAD tools & interactive 3d applications.</p>
+                <p>A Software and Web Developer <br />Specializing in CAD tools & interactive 3d applications</p>
             </div>
         </div>
         <nav>
