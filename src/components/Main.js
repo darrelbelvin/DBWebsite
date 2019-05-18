@@ -19,7 +19,7 @@ class Main extends React.Component {
           <p>Darrel is my name and building stuff's my game.<br/>
           I love puzzles, challenges, and beautiful solutions.<br/>
           If you're looking for a fresh perspective, I'm your man.
-          out my </p>
+          out my <a onClick={() => this.props.onOpenArticle('work')}>awesome work</a>.</p>
           <p>Lorem ipicula.</p>
           {close}
         </article>
@@ -87,6 +87,7 @@ Main.propTypes = {
   article: PropTypes.string,
   articleTimeout: PropTypes.bool,
   onCloseArticle: PropTypes.func,
+  onOpenArticle: PropTypes.func,
   timeout: PropTypes.bool,
   setWrapperRef: PropTypes.func.isRequired,
 }
