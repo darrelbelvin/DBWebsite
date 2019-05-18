@@ -19,7 +19,7 @@ class Main extends React.Component {
           <p>Darrel is my name and building stuff's my game.<br/>
           I love puzzles, challenges, and beautiful solutions.<br/>
           If you're looking for a fresh perspective, I'm your man.
-          out my <a href="#work">awesome work</a>.</p>
+          out my </p>
           <p>Lorem ipicula.</p>
           {close}
         </article>
@@ -27,8 +27,8 @@ class Main extends React.Component {
         <article id="work" className={`${this.props.article === 'work' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Work</h2>
           <span className="image main"><img src={pic02} alt="" /></span>
-          <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-          <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+          <p>The majority of my work has been in-house productivity tools for engineering and manufacturing companies. </p>
+          <p>An interactive, 3D <a href="qcdesignerbeta.netlify.com">Elevator Interior Designer</a> for Quick Cab.</p>
           {close}
         </article>
 
@@ -38,6 +38,7 @@ class Main extends React.Component {
           <p>I love playing with puzzles, tennis, and minecraft.<br/>
           I'm a huge fan of science and futurism, AI, rockets, and astronomy.<br/>
           I'm learning guitar and re-learning piano.</p>
+          {close}
         </article>        
 
         <article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
