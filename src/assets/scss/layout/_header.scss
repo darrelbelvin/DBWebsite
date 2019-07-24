@@ -109,7 +109,8 @@
 						border-left: 0;
 					}
 
-					a {
+					button {
+						@extend a;
 						display: block;
 						min-width: 7.5rem;
 						height: 2.75rem;
@@ -118,6 +119,7 @@
 						text-transform: uppercase;
 						letter-spacing: _font(letter-spacing);
 						font-size: 0.8rem;
+						box-shadow: none;
 						border-bottom: 0;
 
 						&:hover {

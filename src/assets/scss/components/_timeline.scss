@@ -1,0 +1,61 @@
+/* Timeline */
+$timeline-bg: #2d3439;
+$timeline-shadow: #70828f24;
+
+.vertical-timeline {
+	max-width: none !important;
+	
+
+	&::before {
+		width: 2px !important;
+		background: #ffffffb0 !important;
+	}
+
+	&-element {
+		&-content {
+			background: $timeline-bg !important;
+		  box-shadow: 0 3px 0 $timeline-shadow !important;
+
+		  &::before {
+		  	border-right-color: $timeline-bg !important;
+		  }
+
+		  > p {
+		  	color: #ffffff !important;
+		  }
+		}
+
+		&-date {
+			color: #ffffff !important;
+		}
+
+		&-icon {
+			box-shadow: 0 0 0 1.5px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05) !important;
+			background: $timeline-bg;
+			fill: #ddd;
+		}
+	}
+}
+
+/*Arrows*/
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-content::before {
+    border-color: transparent !important;
+    border-left-color: $timeline-bg !important;
+  }
+
+  .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before,
+  .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content::before {
+    border-color: transparent !important;
+    border-right-color: $timeline-bg !important;
+  }
+}
+
+.vertical-timeline-element--no-children .vertical-timeline-element-content::before {
+  display: none !important;
+}
+
+.vertical-timeline-element--no-children .vertical-timeline-element-content {
+  background: transparent !important;
+  box-shadow: none !important;
+}

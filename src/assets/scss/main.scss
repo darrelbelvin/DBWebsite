@@ -12,7 +12,7 @@
 */
 
 	@include skel-breakpoints((
-		xlarge:		'(max-width: 1680px)',
+		xlarge:		'(max-width: 2048px)',
 		large:		'(max-width: 1280px)',
 		medium:		'(max-width: 980px)',
 		small:		'(max-width: 736px)',
@@ -39,6 +39,7 @@
 	@import 'components/list';
 	@import 'components/table';
 	@import 'components/button';
+	@import 'components/timeline';
 
 // Layout.
 
@@ -47,3 +48,9 @@
 	@import 'layout/header';
 	@import 'layout/main';
 	@import 'layout/footer';
+
+.scrollDisabled {   
+    position: fixed;
+    margin-top: 0;// override by JS to use acc to curr $(window).scrollTop()
+    width: 100%;
+}
