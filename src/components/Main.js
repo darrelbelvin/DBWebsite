@@ -38,16 +38,16 @@ class Main extends React.Component {
     };
     console.log("asdfkljhasdklfjh")
     console.log("%REACT_APP_EMAILJS_USERID%");
-    console.log(process.env.REACT_APP_EMAILJS_USERID);
-    emailjs.init(process.env.REACT_APP_EMAILJS_USERID);
+    console.log(process.env.GATSBY_APP_EMAILJS_USERID);
+    emailjs.init(process.env.GATSBY_APP_EMAILJS_USERID);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault()
-    console.log(process.env.REACT_APP_EMAILJS_SERVICEID);
+    console.log(process.env.GATSBY_APP_EMAILJS_SERVICEID);
 
-    emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICEID, process.env.REACT_APP_EMAILJS_TEMPLATEID, '#contact_form')
+    emailjs.sendForm(process.env.GATSBY_APP_EMAILJS_SERVICEID, process.env.GATSBY_APP_EMAILJS_TEMPLATEID, '#contact_form')
       .then(function(response) {
          console.log('SUCCESS!', response.status, response.text);
       }, function(error) {
