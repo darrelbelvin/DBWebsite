@@ -84,4 +84,16 @@
 				margin: (_size(element-margin) * 0.75) 0;
 			}
 		}
+
+		&.gallery {
+			width: 100%;
+			max-width: 500px;
+			cursor: zoom-in;
+			display: block;
+			margin: (_size(element-margin) * 0.5) 0;
+
+			img {
+				width: 100%;
+			}
+		}
 	}
