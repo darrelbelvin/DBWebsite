@@ -7,8 +7,8 @@ import 'react-vertical-timeline-component/style.min.css';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
-import pic01 from '../images/Binary Code.jpg'
-import pic02 from '../images/IMG_20190724_115926_small.jpg'
+//import pic01 from '../images/Binary Code.jpg'
+//import pic02 from '../images/IMG_20190724_115926_small.jpg'
 
 import cabDes1 from '../images/cabDes1.png'
 import cabDes2 from '../images/cabDes2.png'
@@ -168,14 +168,14 @@ class Main extends React.Component {
           {close}
         </article>
 
-        <article ref={this.props.article === 'play' && this.props.setWrapperRef} id="play" className={`${this.props.article === 'play' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+        {/*<article ref={this.props.article === 'play' && this.props.setWrapperRef} id="play" className={`${this.props.article === 'play' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Hobbies</h2>
           <span className="image main"><img src={pic02} alt="" /></span>
           <p>I enjoy playing tennis, solving puzzles, and making art.<br/>
           I'm a huge fan of science and futurism, artificial inteligence, rockets, and astronomy.<br/>
           I'm learning guitar and re-learning piano.</p>
           {close}
-        </article>
+        </article>*/}
 
         <article ref={this.props.article === 'contact' && this.props.setWrapperRef} id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
