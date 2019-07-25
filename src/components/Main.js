@@ -60,10 +60,9 @@ class Main extends React.Component {
 
         <article ref={this.props.article === 'intro' && this.props.setWrapperRef} id="intro" className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Intro</h2>
-          <span className="image main"><img src={pic01} alt="" /></span>
-          <p>Darrel is my name and I love building stuff. I've been challenging myself to create more impressive things since before I can remember.
-          My older brother introduced me to programming at age 13 and I've been making scripts and applications ever since, over half my life now.<br/>
-          Being self taught and a fiercely independent thinker gives me an advantage in situations where creative, out of the box thinking is required.
+          {/*<span className="image main"><img src={pic01} alt="" /></span>*/}
+          <p>Darrel is my name and I love building stuff. My older brother introduced me to programming at age 13 and I've been making scripts and applications ever since.</p>
+          <p>Being a fiercely independent thinker gives me an advantage in situations where creative, out of the box thinking is required.
           If you're looking for a fresh perspective or unique solution, I'm your man.
           I love puzzles, challenges, and beautiful solutions.</p> {// eslint-disable-next-line
 }         <p>Check out <a onClick={() => this.props.onOpenArticle('work')}>my work</a>.</p>
@@ -161,7 +160,7 @@ class Main extends React.Component {
               <p>
                 <strong>Problem:</strong> Stitching together profiles in SketchUp, a 3D modeling program, was tedious and time consuming in 2007.<br/>
                 <strong>Solution:</strong> A Ruby plugin that automates said stitching process.<br/>
-                <strong>Community Response:</strong>Very impressed that a <a href="https://sketchucation.com/forums/viewtopic.php?f=323&t=1306#p5850" target="_blank" rel="noopener noreferrer"> 14 year old</a> created such a useful tool.<br/>
+                <strong>Community Response:</strong> Very impressed that a <a href="https://sketchucation.com/forums/viewtopic.php?f=323&t=1306#p5850" target="_blank" rel="noopener noreferrer"> 14 year old</a> created such a useful tool.<br/>
               </p>
             </VerticalTimelineElement>
             

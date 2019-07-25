@@ -10,14 +10,14 @@ const Header = (props) => (
         <div className="content">
             <div className="inner">
                 <h1>Darrel Belvin</h1>
-                <p>A Software and Web Developer <br />Specializing in CAD tools & interactive 3d applications</p>
+                <h4>Software and Web Development Consultant <br />Specialist in CAD & interactive 3d applications</h4>
             </div>
         </div>
         <nav>
             <ul>
                 <li><button onClick={() => {props.onOpenArticle('intro')}}>Intro</button></li>
                 <li><button onClick={() => {props.onOpenArticle('work')}}>Work</button></li>
-                <li><button onClick={() => {props.onOpenArticle('play')}}>Play</button></li>
+                {/*<li><button onClick={() => {props.onOpenArticle('play')}}>Play</button></li>*/}
                 <li><button onClick={() => {props.onOpenArticle('contact')}}>Contact</button></li>
             </ul>
         </nav>
