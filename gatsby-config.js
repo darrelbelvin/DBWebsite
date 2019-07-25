@@ -13,8 +13,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: "Darrel's Dev & Design",
+        short_name: 'Dtothe3',
         start_url: '/',
         background_color: '#1c1c1c',
         theme_color: '#1c1c1c',
