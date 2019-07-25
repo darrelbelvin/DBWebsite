@@ -9,7 +9,6 @@ import 'react-image-lightbox/style.css';
 
 import pic01 from '../images/Binary Code.jpg'
 import pic02 from '../images/IMG_20190724_115926_small.jpg'
-import pic03 from '../images/pic03.jpg'
 
 import cabDes1 from '../images/cabDes1.png'
 import cabDes2 from '../images/cabDes2.png'
@@ -35,28 +34,24 @@ class Main extends React.Component {
       photoSet: "elevators",
       photoIndex: 0,
       isLightboxOpen: false,
+      niceAlert: {heading: "", message: ""}
     };
-    console.log("asdfkljhasdklfjh")
-    console.log("%REACT_APP_EMAILJS_USERID%");
-    console.log(process.env.GATSBY_APP_EMAILJS_USERID);
     emailjs.init(process.env.GATSBY_APP_EMAILJS_USERID);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
-    e.preventDefault()
-    console.log(process.env.GATSBY_APP_EMAILJS_SERVICEID);
-
     emailjs.sendForm(process.env.GATSBY_APP_EMAILJS_SERVICEID, process.env.GATSBY_APP_EMAILJS_TEMPLATEID, '#contact_form')
       .then(function(response) {
-         console.log('SUCCESS!', response.status, response.text);
+        this.setState({niceAlert: {heading: "Message Sent", message: "You can expect a response within one business day."}})
+        this.props.onOpenArticle('niceAlert')
       }, function(error) {
-         console.log('FAILED...', error);
+        alert("Message delivery failed. You can try again or directly email darrel.belvin@gmail.com")
       });
   }
 
   render() {
-    const { photoSet, photoIndex, isLightboxOpen } = this.state, images = imageSets[photoSet];
+    const { photoSet, photoIndex, isLightboxOpen, niceAlert } = this.state, images = imageSets[photoSet];
 
     let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
 
@@ -181,13 +176,6 @@ class Main extends React.Component {
           I'm a huge fan of science and futurism, artificial inteligence, rockets, and astronomy.<br/>
           I'm learning guitar and re-learning piano.</p>
           {close}
-        </article>        
-
-        <article ref={this.props.article === 'about' && this.props.setWrapperRef} id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2 className="major">About</h2>
-          <span className="image main"><img src={pic03} alt="" /></span>
-          <p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
-          {close}
         </article>
 
         <article ref={this.props.article === 'contact' && this.props.setWrapperRef} id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
@@ -206,7 +194,7 @@ class Main extends React.Component {
               <textarea name="message" id="message" rows="4" maxLength="6000" required></textarea>
             </div>
             <ul className="actions">
-              <li><input type="submit" onClick={this.handleSubmit} value="Send Message" className="special" /></li>
+              <li><input type="button" onClick={this.handleSubmit} value="Send Message" className="special" /></li>
               <li><input type="reset" value="Reset" /></li>
             </ul>
           </form>
@@ -216,6 +204,12 @@ class Main extends React.Component {
             <li><a href="#" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
             <li><a href="#" className="icon fa-github"><span className="label">GitHub</span></a></li>
           </ul>*/}
+          {close}
+        </article>
+
+        <article ref={this.props.article === 'niceAlert' && this.props.setWrapperRef} id="niceAlert" className={`${this.props.article === 'niceAlert' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+          <h2 className="major">{niceAlert.heading}</h2>
+          <p>{niceAlert.message}</p>
           {close}
         </article>
 
