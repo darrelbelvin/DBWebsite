@@ -11,7 +11,7 @@ const LeggoMyLego = () => (
         <h1>Leggo My Lego</h1>
         <h2>A Lego Minifigure Detection Android App</h2>
         <h3>
-          <a href="/leggo_my_lego.apk" target="_blank">🡆🡆🡆 Click here to Download app package 🡄🡄🡄</a>
+          <a href="/leggo_my_lego.apk">&gt;&gt;&gt; Click here to Download app package &lt;&lt;&lt;</a>
         </h3>
         <p>
         ⚠ In order to install this app you will need to <a href='https://support.google.com/android/answer/9457058?hl=en'>enable apps from unknown locations.</a>
