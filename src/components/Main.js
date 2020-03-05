@@ -71,6 +71,7 @@ class Main extends React.Component {
 
         <article ref={(this.props.article === 'work' && !isLightboxOpen) && this.props.setWrapperRef} id="work" className={`${this.props.article === 'work' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none', width: '1400px'}}>
           <h2 className="major">Work</h2>
+          <h3>I am about to graduate from a data science bootcamp. An update to this section with a bunch of new projects is coming soon!</h3>
           <p>I have been building scripts and applications for over 13 years and have used 16 different programming languages, all self-taught. With the speed at which I am able to learn new API's and programming languages, not having experience with a technology is not a barrier to tackling a project utilizing it.</p>
           <h3>These are of some of my larger projects over the years</h3>
           

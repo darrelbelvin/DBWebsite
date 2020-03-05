@@ -1,0 +1,14 @@
+.container {
+	height: 300px;
+	margin: auto;
+  }
+  
+  .one {
+	width: 65%;
+	float: left;
+  }
+  
+  .two {
+	margin-left: 65%;
+	margin-right: -3pc;
+  }
