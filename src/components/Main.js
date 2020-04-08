@@ -8,7 +8,7 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
 //import pic01 from '../images/Binary Code.jpg'
-//import pic02 from '../images/IMG_20190724_115926_small.jpg'
+import pic02 from '../images/IMG_20190724_115926_small.jpg'
 
 import cabDes1 from '../images/cabDes1.png'
 import cabDes2 from '../images/cabDes2.png'
@@ -71,11 +71,46 @@ class Main extends React.Component {
 
         <article ref={(this.props.article === 'work' && !isLightboxOpen) && this.props.setWrapperRef} id="work" className={`${this.props.article === 'work' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none', width: '1400px'}}>
           <h2 className="major">Work</h2>
-          <h3>I am about to graduate from a data science bootcamp. An update to this section with a bunch of new projects is coming soon!</h3>
-          <p>I have been building scripts and applications for over 13 years and have used 16 different programming languages, all self-taught. With the speed at which I am able to learn new API's and programming languages, not having experience with a technology is not a barrier to tackling a project utilizing it.</p>
+          <p></p>
           <h3>These are of some of my larger projects over the years</h3>
           
           <VerticalTimeline>
+            <VerticalTimelineElement
+              date="2020"
+              icon={<SchoolIcon />}
+            >
+              <h3 className="vertical-timeline-element-title">Leggo My Lego</h3>
+              <h4 className="vertical-timeline-element-subtitle">Galvanize, Seattle, WA</h4>
+              <p>
+                <strong>Problem:</strong> LEGOs have a poor post-build experience. Messes of pieces.<br/>
+                <strong>(Part of a) Solution:</strong> Mobile app that detects lego minifigures. Further work will identify specific minifigures and catolog your collection.
+              </p>
+              <img className="image gallery" src={cabThumbs} alt="error" onClick ={() => this.setState({ isLightboxOpen: true})} />
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              date="2020"
+              icon={<SchoolIcon />}
+            >
+              <h3 className="vertical-timeline-element-title">Donut Corners</h3>
+              <h4 className="vertical-timeline-element-subtitle">Galvanize, Seattle, WA</h4>
+              <p>
+                <strong>Problem:</strong> <br/>
+                <strong>Solution:</strong> Novel corner detection method that 
+              </p>
+              <img className="image gallery" src={cabThumbs} alt="error" onClick ={() => this.setState({ isLightboxOpen: true})} />
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              date="2020"
+              icon={<SchoolIcon />}
+            >
+              <h3 className="vertical-timeline-element-title">Fraud Case Study</h3>
+              <h4 className="vertical-timeline-element-subtitle">Galvanize, Seattle, WA</h4>
+              <p>
+                <strong>Problem:</strong> Event ticketing site is losing money to fraudulant events that have to be refunded.<br/>
+                <strong>Solution:</strong> A fraud detection model utilizing NLP and GBRF to flag potentially fraudulant events. Deployed in the cloud with a secure management dashboard.
+              </p>
+              <img className="image gallery" src={cabThumbs} alt="error" onClick ={() => this.setState({ isLightboxOpen: true})} />
+            </VerticalTimelineElement>
             <VerticalTimelineElement
               date="2019"
               icon={<WorkIcon />}
@@ -92,11 +127,11 @@ class Main extends React.Component {
               date="2018"
               icon={<WorkIcon />}
             >
-              <h3 className="vertical-timeline-element-title">SOLIDWORKS Engine</h3>
+              <h3 className="vertical-timeline-element-title">SOLIDWORKS Engine, A Data Pipeline</h3>
               <h4 className="vertical-timeline-element-subtitle">Vertical Dimensions, Tukwila, WA</h4>
               <p>
-                <strong>Problem:</strong> Company's primary drafting software, SOLIDWORKS, doesn't handle large sets of formulas well, running slowly and making frequent errors.<br/>
-                <strong>Solution:</strong> An Excel plugin that drives part data in SOLIDWORKS, allowing the power and speed of Excel's equation solver to be used in SOLIDWORKS.
+                <strong>Problem:</strong> Company's primary drafting software, SOLIDWORKS, has a buggy data pipeline between overall specifications and individual parts that runs slowly and makes frequent errors.<br/>
+                <strong>Solution:</strong> A new data pipeline in the form of an Excel plugin that bypasses the bugs in SOLIDWORKS pipeline and as a bonus allows seamless use of Excel's powerful equation solver.
               </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -169,14 +204,14 @@ class Main extends React.Component {
           {close}
         </article>
 
-        {/*<article ref={this.props.article === 'play' && this.props.setWrapperRef} id="play" className={`${this.props.article === 'play' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+        <article ref={this.props.article === 'play' && this.props.setWrapperRef} id="play" className={`${this.props.article === 'play' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Hobbies</h2>
           <span className="image main"><img src={pic02} alt="" /></span>
-          <p>I enjoy playing tennis, solving puzzles, and making art.<br/>
-          I'm a huge fan of science and futurism, artificial inteligence, rockets, and astronomy.<br/>
-          I'm learning guitar and re-learning piano.</p>
+          <p>In my free time I enjoy playing tennis, solving puzzles, and occasionally I make art.<br/>
+          I'm fascinated by artificial inteligence, rockets, astronomy, and physics and I try to keep informed on the latest developments.
+          </p>
           {close}
-        </article>*/}
+        </article>
 
         <article ref={this.props.article === 'contact' && this.props.setWrapperRef} id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
