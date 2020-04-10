@@ -61,32 +61,43 @@ class Main extends React.Component {
         <article ref={this.props.article === 'intro' && this.props.setWrapperRef} id="intro" className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Intro</h2>
           {/*<span className="image main"><img src={pic01} alt="" /></span>*/}
-          <p>Darrel is my name and I love building stuff. My older brother introduced me to programming at age 13 and I've been making scripts and applications ever since.</p>
-          <p>Being a fiercely independent thinker gives me an advantage in situations where creative, out of the box thinking is required.
-          If you're looking for a fresh perspective or unique solution, I'm your man.
-          I love puzzles, challenges, and beautiful solutions.</p> {// eslint-disable-next-line
-}         <p>Check out <a onClick={() => this.props.onOpenArticle('work')}>my work</a>.</p>
+          <p>
+            My childhood was unique, my education was the flavor of homeschooling where you teach yourself from the textbook.
+            I got really fast at finishing schoolwork and spent most of my time building stuff, solving puzzles, or being active.
+            I've always been fond of puzzles and love a good challenge.
+          </p>
+          <p>
+            After building a popsicle stick bridge that carried 1,300 times its own weight I decided that structural engineering
+            would be a good outlet for my creativity and nearly got a Bachelor's for it. I took a break from college to work with
+            engineers and discovered just how codified engineering is and how much fun coding is. I quickly became obsessed with
+            automation and literally programmed myself out of a job (woohoo!!). My target career has been AI ever since. I built
+            up my coding skills on the side for a couple years while working as a manufacturing project manager. Then I attended
+            a data science bootcamp where I learned how to use modern tools to analyze automate more complex problems.
+          </p>
+          <p>
+            I'm currently searching for data science or machine learning opportunities. Please <a onClick={() => this.props.onOpenArticle('contact')}>contact me</a> if you're interested in connecting.
+          Check out <a onClick={() => this.props.onOpenArticle('work')}>my work</a>.</p>
           {close}
         </article>
 
         <article ref={(this.props.article === 'work' && !isLightboxOpen) && this.props.setWrapperRef} id="work" className={`${this.props.article === 'work' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none', width: '1400px'}}>
           <h2 className="major">Work</h2>
-          <p></p>
+          <p>I've been programming since I was thirteen. If there's anything that defines my problem solving style, it's that nothing is too challenging for me to attempt.</p>
           <h3>These are of some of my larger projects over the years</h3>
           
           <VerticalTimeline>
-            <VerticalTimelineElement
+            {/* <VerticalTimelineElement
               date="2020"
               icon={<SchoolIcon />}
             >
               <h3 className="vertical-timeline-element-title">Leggo My Lego</h3>
               <h4 className="vertical-timeline-element-subtitle">Galvanize, Seattle, WA</h4>
               <p>
-                <strong>Problem:</strong> LEGOs have a poor post-build experience. Messes of pieces.<br/>
-                <strong>(Part of a) Solution:</strong> Mobile app that detects lego minifigures. Further work will identify specific minifigures and catolog your collection.
+                <strong>Problem:</strong> <br/>
+                <strong>Solution:</strong> Mobile app that detects lego minifigures. Uses a neural net to locate and identify the different parts of the minifigure.
               </p>
               <img className="image gallery" src={cabThumbs} alt="error" onClick ={() => this.setState({ isLightboxOpen: true})} />
-            </VerticalTimelineElement>
+            </VerticalTimelineElement> */}
             <VerticalTimelineElement
               date="2020"
               icon={<SchoolIcon />}
@@ -94,10 +105,10 @@ class Main extends React.Component {
               <h3 className="vertical-timeline-element-title">Donut Corners</h3>
               <h4 className="vertical-timeline-element-subtitle">Galvanize, Seattle, WA</h4>
               <p>
-                <strong>Problem:</strong> <br/>
-                <strong>Solution:</strong> Novel corner detection method that 
+                <strong>Problem:</strong> I'm eager to get into object detection topics before the data science course I'm taking introduces any.<br/>
+                <strong>Solution:</strong> Created a novel corner detection method that has potential for use in SLAM methods. Simultaneously locates corners and the edges connected to those corners.
               </p>
-              <img className="image gallery" src={cabThumbs} alt="error" onClick ={() => this.setState({ isLightboxOpen: true})} />
+              {/* <img className="image gallery" src={cabThumbs} alt="error" onClick ={() => this.setState({ isLightboxOpen: true})} /> */}
             </VerticalTimelineElement>
             <VerticalTimelineElement
               date="2020"
@@ -109,7 +120,6 @@ class Main extends React.Component {
                 <strong>Problem:</strong> Event ticketing site is losing money to fraudulant events that have to be refunded.<br/>
                 <strong>Solution:</strong> A fraud detection model utilizing NLP and GBRF to flag potentially fraudulant events. Deployed in the cloud with a secure management dashboard.
               </p>
-              <img className="image gallery" src={cabThumbs} alt="error" onClick ={() => this.setState({ isLightboxOpen: true})} />
             </VerticalTimelineElement>
             <VerticalTimelineElement
               date="2019"
@@ -119,7 +129,7 @@ class Main extends React.Component {
               <h4 className="vertical-timeline-element-subtitle">Vertical Dimensions, Tukwila, WA</h4>
               <p>
                 <strong>Problem:</strong> Competition offers online interior designers and Vertical Dimensions did not.<br/>
-                <strong>Solution:</strong> A website module that designs and renders elevator interiors live in 3D. Vertical Dimensions now has the most advanced elevator interior designer in existence. <a href="http://qcdesignerbeta.netlify.com" target="_blank" rel="noopener noreferrer">Go check it out.</a>
+                <strong>Solution:</strong> A website module that designs and renders elevator interiors live in 3D. Vertical Dimensions now has the most advanced elevator interior designer in existence. <a href="http://qcdesigner.netlify.com" target="_blank" rel="noopener noreferrer">Go check it out.</a>
               </p>
               <img className="image gallery" src={cabThumbs} alt="error" onClick ={() => this.setState({ isLightboxOpen: true})} />
             </VerticalTimelineElement>
